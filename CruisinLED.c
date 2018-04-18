@@ -21,7 +21,7 @@ task main()
 		MotorValue = (127 * (SensorValue[smokinPot]) / 4096);
 		motor[drive] = MotorValue;
 
-		if (MotorValue >= 1 && MotorValue <= 45)
+		if (MotorValue >= 1S && MotorValue <= 45)
 		{
 			SensorValue[ledGreen] = 1;
 			SensorValue[ledYellow] = 0;
