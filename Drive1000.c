@@ -18,28 +18,7 @@ task main()
 
 	while(true)
 	{
-		MotorValue = (SensorValue[ultrasonic]);
-		motor[drive] = MotorValue;
-
-		if (MotorValue >= 1 && MotorValue <= 45)
-		{
-			SensorValue[ledGreen] = 1;
-			SensorValue[ledYellow] = 0;
-			SensorValue[ledRed] = 0;
-		}
-
-		else if (MotorValue >= 46 && MotorValue <= 75)
-		{
-			SensorValue[ledYellow] = 1;
-			SensorValue[ledGreen] = 0;
-			SensorValue[ledRed] = 0;
-		}
-
-		else if (MotorValue >= 76 && MotorValue <= 127)
-		{
-			SensorValue[ledRed] = 1;
-			SensorValue[ledGreen] = 0;
-			SensorValue[ledYellow] = 0;
-		}
+		MotorValue = (127 * (SensorValue[smokinPot]));
+		motor[drive] = MotorValue / 4096;
 	}
 }
