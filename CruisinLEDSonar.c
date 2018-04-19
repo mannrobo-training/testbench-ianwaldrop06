@@ -21,7 +21,7 @@ task main()
 		MotorValue = (SensorValue[ultrasonic]);
 		motor[drive] = MotorValue;
 
-		if (MotorValue >= 1 && MotorValue <= 45)
+		if (MotorValue  <= 45)
 		{
 			SensorValue[ledGreen] = 1;
 			SensorValue[ledYellow] = 0;
